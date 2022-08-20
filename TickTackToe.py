@@ -107,6 +107,7 @@ def game():
         player = flipPlayer(player)
         clearScreen()
     except (ValueError):
+      clearScreen()
       printErrorTryAgain(noValidPositionMessage)
 
 game()
