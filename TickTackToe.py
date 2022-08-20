@@ -25,14 +25,14 @@ def drawPlane(title, boxes):
     "'---------'\n"
   )
 
-noValidPositionMessage = "That's no valid position."
+noValidPositionMessage = "Det här är ingen giltlig position."
 
 # ([String1]9, int, String1) -> String or None
 def place(list, position, newElement):
   if position > 9 or position < 1:
     return noValidPositionMessage
   elif list[position-1] != " ":
-    return "That position is occupied."
+    return "Den positionen är upptagen."
   else:
     list[position-1] = newElement
       # The result is always None if there is no return statement
@@ -69,7 +69,7 @@ def flipPlayer(player):
   return nextPlayer
 
 def printErrorTryAgain(errorMsg):
-  print(f"Oops! {errorMsg} Try again\n")
+  print(f"Oj! {errorMsg} försök igen\n")
 
 def game():
   spelplan = [" "] * 9
